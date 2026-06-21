@@ -105,7 +105,10 @@ export function BrandsMarquee() {
       </p>
       <div className="marquee-track flex whitespace-nowrap">
         {[...BRANDS, ...BRANDS, ...BRANDS].map((brand: string, i: number) => (
-          <span key={i} className="mx-12 font-display text-3xl text-wood-dark/12">
+          <span
+            key={i}
+            className="mx-12 font-display text-3xl text-wood-medium transition-colors duration-300 hover:text-wood-dark"
+          >
             {brand}
           </span>
         ))}
