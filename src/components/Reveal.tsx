@@ -40,22 +40,26 @@ export function TextReveal({
   text,
   className = "",
   delay = 0,
+  animateOnMount = false,
 }: {
   text: string;
   className?: string;
   delay?: number;
+  /** Use mount animation instead of whileInView — required for above-the-fold hero text */
+  animateOnMount?: boolean;
 }) {
   const words = text.split(" ");
 
   return (
     <span className={className}>
       {words.map((word, i) => (
-        <span key={i} className="inline-block overflow-hidden mr-[0.25em]">
+        <span key={i} className="mr-[0.25em] inline-block overflow-hidden">
           <motion.span
             className="inline-block"
             initial={{ y: "110%" }}
-            whileInView={{ y: 0 }}
-            viewport={{ once: true }}
+            {...(animateOnMount
+              ? { animate: { y: 0 } }
+              : { whileInView: { y: 0 }, viewport: { once: true } })}
             transition={{
               duration: 0.6,
               delay: delay + i * 0.04,

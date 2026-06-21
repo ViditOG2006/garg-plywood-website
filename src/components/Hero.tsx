@@ -7,6 +7,8 @@ import { useRef } from "react";
 import { TextReveal } from "./Reveal";
 import { SITE, IMAGES, STATS } from "@/lib/constants";
 
+const HERO_STATS = STATS.slice(0, 3);
+
 export default function Hero() {
   const ref = useRef<HTMLElement>(null);
   const { scrollYProgress } = useScroll({
@@ -18,7 +20,7 @@ export default function Hero() {
   const opacity = useTransform(scrollYProgress, [0, 0.75], [1, 0]);
 
   return (
-    <section ref={ref} className="relative min-h-screen overflow-hidden bg-wood-deep">
+    <section ref={ref} className="relative min-h-[88dvh] overflow-hidden bg-wood-deep md:min-h-screen">
       <motion.div style={{ scale }} className="absolute inset-0">
         <Image
           src={IMAGES.heroWood}
@@ -33,14 +35,14 @@ export default function Hero() {
 
       <motion.div
         style={{ y, opacity }}
-        className="relative z-10 flex min-h-screen flex-col justify-end px-6 pb-16 pt-36 md:px-12 lg:px-20 xl:px-32"
+        className="relative z-10 flex min-h-[88dvh] flex-col justify-center px-6 pb-10 pt-28 md:min-h-screen md:justify-end md:pb-16 md:pt-36 md:px-12 lg:px-20 xl:px-32"
       >
         <div className="mx-auto w-full max-w-[1400px]">
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.3, duration: 0.8 }}
-            className="mb-8 flex items-center gap-4"
+            className="mb-5 flex items-center gap-4 md:mb-8"
           >
             <div className="line-accent" />
             <p className="section-label !text-wood-gold">
@@ -48,30 +50,87 @@ export default function Hero() {
             </p>
           </motion.div>
 
-          <h1 className="max-w-5xl font-display text-[clamp(3rem,8vw,7rem)] font-semibold leading-[0.95] tracking-tight text-wood-cream">
-            <TextReveal text="Strong Foundations," delay={0.4} />
+          <motion.div
+            initial={{ opacity: 0, scale: 0.92 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ delay: 0.35, duration: 0.7 }}
+            className="mb-5 md:hidden"
+          >
+            <div className="relative h-16 w-16 overflow-hidden rounded-full ring-2 ring-wood-gold/50 shadow-lg">
+              <Image
+                src={IMAGES.heroWood}
+                alt=""
+                fill
+                className="object-cover"
+                sizes="64px"
+                aria-hidden
+              />
+              <div className="absolute inset-0 flex items-start justify-center overflow-hidden bg-white/85">
+                <Image
+                  src={IMAGES.logo}
+                  alt="Garg Plywood Palace"
+                  width={80}
+                  height={80}
+                  className="h-[115%] w-[115%] max-w-none object-cover object-top"
+                  sizes="64px"
+                />
+              </div>
+            </div>
+          </motion.div>
+
+          <h1 className="max-w-5xl font-display text-[clamp(2.5rem,9vw,7rem)] font-semibold leading-[0.95] tracking-tight text-wood-cream">
+            <TextReveal text="Strong Foundations," delay={0.4} animateOnMount />
             <br />
-            <span className="text-gradient-gold italic font-medium">
-              <TextReveal text="Beautiful Creations" delay={0.65} />
+            <span className="text-gradient-gold font-medium italic">
+              <TextReveal text="Beautiful Creations" delay={0.65} animateOnMount />
             </span>
           </h1>
 
           <motion.p
+            initial={{ opacity: 0, y: 16 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.85, duration: 0.7 }}
+            className="mt-3 font-display text-lg italic text-wood-gold/90 md:mt-4 md:text-xl"
+          >
+            {SITE.subtagline}
+          </motion.p>
+
+          <motion.div
+            initial={{ opacity: 0, y: 16 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.95, duration: 0.7 }}
+            className="mt-5 flex flex-wrap gap-2 md:hidden"
+          >
+            {HERO_STATS.map((stat) => (
+              <div
+                key={stat.label}
+                className="border border-wood-gold/25 bg-wood-deep/50 px-3 py-2 backdrop-blur-sm"
+              >
+                <span className="font-display text-lg font-semibold text-wood-gold">
+                  {stat.value}
+                </span>
+                <span className="ml-2 text-[9px] uppercase tracking-[0.2em] text-wood-cream/55">
+                  {stat.label}
+                </span>
+              </div>
+            ))}
+          </motion.div>
+
+          <motion.p
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 1.1, duration: 0.8 }}
-            className="mt-8 max-w-xl text-base leading-relaxed text-wood-cream/75 md:text-lg"
+            transition={{ delay: 1.05, duration: 0.8 }}
+            className="mt-6 max-w-xl text-base leading-relaxed text-wood-cream/75 md:mt-8 md:text-lg"
           >
-            {SITE.subtagline}. Wholesale & retail plywood, block boards, laminates, timber &amp;
-            HDHMR — trusted by architects, builders, and homeowners across Delhi NCR since{" "}
-            {SITE.founded}.
+            Wholesale & retail plywood, block boards, laminates, timber &amp; HDHMR — trusted by
+            architects, builders, and homeowners across Delhi NCR since {SITE.founded}.
           </motion.p>
 
           <motion.div
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 1.3 }}
-            className="mt-12 flex flex-wrap gap-5"
+            transition={{ delay: 1.2 }}
+            className="mt-8 flex flex-wrap gap-4 md:mt-12 md:gap-5"
           >
             <Link href="/products" className="btn-primary">
               Explore Products
@@ -84,8 +143,8 @@ export default function Hero() {
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 1.6, duration: 0.9 }}
-            className="mt-20 grid grid-cols-2 gap-px border border-wood-gold/20 bg-wood-gold/20 md:grid-cols-4"
+            transition={{ delay: 1.4, duration: 0.9 }}
+            className="mt-10 hidden grid-cols-2 gap-px border border-wood-gold/20 bg-wood-gold/20 md:mt-20 md:grid md:grid-cols-4"
           >
             {STATS.map((stat) => (
               <div
