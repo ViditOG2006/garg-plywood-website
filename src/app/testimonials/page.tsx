@@ -7,7 +7,7 @@ import { TESTIMONIALS, IMAGES } from "@/lib/constants";
 export const metadata = createMetadata({
   title: "Testimonials",
   description:
-    "Client testimonials and recommendation letters for Garg Plywood Palace from Hagerstone International, Creative Interio, Divine Interiors, and more.",
+    "Client testimonials and recommendation letters for Garg Plywood Palace from interior firms, contractors, and designers across Delhi NCR.",
   path: "/testimonials",
 });
 

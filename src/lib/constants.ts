@@ -223,63 +223,63 @@ export const CLIENTS_SERVE = {
 
 export const CLIENT_LETTERS = [
   {
-    src: "/images/testimonials/letter-hagerstone.jpg",
-    alt: "Recommendation letter from Hagerstone International Pvt. Ltd. for Garg Plywood Palace",
-    client: "Hagerstone International",
+    src: "/images/testimonials/letter-client-1.jpg",
+    alt: "Recommendation letter from Interiors & Decorators Pvt Ltd for Garg Plywood Palace",
+    client: "Interiors & Decorators Pvt Ltd",
   },
   {
-    src: "/images/testimonials/letter-creative-interio.jpg",
-    alt: "Recommendation letter from Creative Interio for Garg Plywood Palace",
-    client: "Creative Interio",
+    src: "/images/testimonials/letter-client-2.jpg",
+    alt: "Recommendation letter from Premier Design Studio for Garg Plywood Palace",
+    client: "Premier Design Studio",
   },
   {
-    src: "/images/testimonials/letter-divine-interiors.jpg",
-    alt: "Certificate of appreciation from Divine Interiors for Garg Plywood Palace",
-    client: "Divine Interiors",
+    src: "/images/testimonials/letter-client-3.jpg",
+    alt: "Certificate of appreciation from Urban Living Interiors for Garg Plywood Palace",
+    client: "Urban Living Interiors",
   },
 ] as const;
 
 export const TESTIMONIALS = [
   {
     id: 1,
-    name: "Hagerstone International Pvt. Ltd.",
+    name: "Interiors & Decorators Pvt Ltd",
     role: "Interior Design & Build",
     quote:
-      "We have been associated with Garg Plywood Palace for our carpentry and material requirements across projects including VST Motors Kotputli, Bansal Tower Noida, and Vinfast Jaipur. We are highly satisfied with the quality of materials and timely deliveries.",
+      "We have been associated with Garg Plywood Palace for our carpentry and material requirements across commercial and residential projects in the NCR region. We are highly satisfied with the quality of materials and timely deliveries.",
     rating: 5,
     project: "Commercial Interiors",
   },
   {
     id: 2,
-    name: "Creative Interio",
-    role: "Interior Contractor, Gurugram",
+    name: "Premier Design Studio",
+    role: "Interior Contractor, Delhi NCR",
     quote:
-      "Having worked with Mr. Amit Gupta for 10 years, we are fully satisfied with the quality of branded block boards, MDF, HDHMR, and teak wood supplied for projects like Max Shalimar Bagh and Policy Bazaar Gurgaon.",
+      "Having worked with Garg Plywood Palace for over a decade, we are fully satisfied with the quality of branded block boards, MDF, HDHMR, and teak wood supplied for premium commercial and retail fit-out projects.",
     rating: 5,
     project: "Premium Commercial Fit-outs",
   },
   {
     id: 3,
-    name: "Divine Interiors",
-    role: "Interior Design, Janakpuri",
+    name: "Urban Living Interiors",
+    role: "Interior Design, Delhi NCR",
     quote:
-      "For 6 years, Garg Plywood Palace has been our trusted plywood supplier. Their unwavering support, exceptional service, quality, reliability, and timely delivery have been invaluable to our projects.",
+      "For six years, Garg Plywood Palace has been our trusted plywood supplier. Their unwavering support, exceptional service, quality, reliability, and timely delivery have been invaluable to our projects.",
     rating: 5,
     project: "Residential & Commercial",
   },
   {
     id: 4,
-    name: "Rajesh Sharma",
-    role: "Interior Contractor, Delhi",
+    name: "Classic Home Solutions",
+    role: "Interior Contractor, Delhi NCR",
     quote:
-      "Garg Plywood Palace has been my go-to supplier for over a decade. Genuine products, fair pricing, and they always have stock when I need it for urgent projects.",
+      "Garg Plywood Palace has been our go-to supplier for over a decade. Genuine products, fair pricing, and they always have stock when we need it for urgent projects.",
     rating: 5,
     project: "Residential Projects",
   },
   {
     id: 5,
-    name: "Neha Singh",
-    role: "Interior Designer, NCR",
+    name: "Metro Build & Design Co.",
+    role: "Interior Design Studio, NCR",
     quote:
       "From marine plywood for wet areas to premium laminates for feature walls — one stop for everything. The team understands designer requirements perfectly.",
     rating: 5,
@@ -287,8 +287,8 @@ export const TESTIMONIALS = [
   },
   {
     id: 6,
-    name: "Vikram Mehta",
-    role: "Builder, Delhi NCR",
+    name: "Harmony Interior Works",
+    role: "Builder & Developer, Delhi NCR",
     quote:
       "We've sourced plywood for multiple housing projects from Garg Plywood Palace. Competitive wholesale rates and zero compromise on quality. Highly dependable.",
     rating: 5,
