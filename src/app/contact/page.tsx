@@ -52,9 +52,9 @@ export default function ContactPage() {
         image={IMAGES.heroWood}
       />
 
-      <section className="section-padding pt-12">
-        <div className="mx-auto grid max-w-[1400px] gap-20 lg:grid-cols-2">
-          <Reveal>
+      <section className="section-padding w-full max-w-full overflow-x-clip pt-12">
+        <div className="mx-auto grid w-full min-w-0 max-w-[1400px] gap-12 lg:grid-cols-2 lg:gap-20">
+          <Reveal className="min-w-0">
             <p className="section-label">Send a Message</p>
             <h2 className="font-display mt-4 text-3xl font-semibold text-wood-dark">
               Get In Touch
@@ -68,7 +68,7 @@ export default function ContactPage() {
                 </p>
               </div>
             ) : (
-              <form onSubmit={handleSubmit} className="mt-10 space-y-6">
+              <form onSubmit={handleSubmit} className="mt-10 min-w-0 space-y-6">
                 {error && (
                   <div className="border border-red-300 bg-red-50 px-5 py-4 text-sm text-red-800">
                     {error}
@@ -83,11 +83,11 @@ export default function ContactPage() {
                     type="text"
                     value={form.name}
                     onChange={(e) => setForm({ ...form, name: e.target.value })}
-                    className="w-full border border-wood-dark/15 bg-white px-5 py-4 text-wood-dark outline-none transition focus:border-wood-gold"
+                    className="min-w-0 w-full border border-wood-dark/15 bg-white px-5 py-4 text-wood-dark outline-none transition focus:border-wood-gold"
                     placeholder="Your name"
                   />
                 </div>
-                <div className="grid gap-6 md:grid-cols-2">
+                <div className="grid min-w-0 gap-6 md:grid-cols-2">
                   <div>
                     <label className="mb-2 block text-[10px] font-bold uppercase tracking-[0.3em] text-wood-medium">
                       Phone
@@ -97,7 +97,7 @@ export default function ContactPage() {
                       type="tel"
                       value={form.phone}
                       onChange={(e) => setForm({ ...form, phone: e.target.value })}
-                      className="w-full border border-wood-dark/15 bg-white px-5 py-4 outline-none transition focus:border-wood-gold"
+                      className="min-w-0 w-full max-w-full border border-wood-dark/15 bg-white px-5 py-4 outline-none transition focus:border-wood-gold"
                       placeholder="+91 XXXXX XXXXX"
                     />
                   </div>
@@ -109,7 +109,7 @@ export default function ContactPage() {
                       type="email"
                       value={form.email}
                       onChange={(e) => setForm({ ...form, email: e.target.value })}
-                      className="w-full border border-wood-dark/15 bg-white px-5 py-4 outline-none transition focus:border-wood-gold"
+                      className="min-w-0 w-full max-w-full border border-wood-dark/15 bg-white px-5 py-4 outline-none transition focus:border-wood-gold"
                       placeholder="you@email.com"
                     />
                   </div>
@@ -121,7 +121,7 @@ export default function ContactPage() {
                   <select
                     value={form.contactPerson}
                     onChange={(e) => setForm({ ...form, contactPerson: e.target.value })}
-                    className="w-full border border-wood-dark/15 bg-white px-5 py-4 outline-none transition focus:border-wood-gold"
+                    className="min-w-0 w-full max-w-full border border-wood-dark/15 bg-white px-5 py-4 text-sm outline-none transition focus:border-wood-gold sm:text-base"
                   >
                     {PEOPLE.owners.map((o) => (
                       <option key={o.name} value={o.name}>
@@ -139,7 +139,7 @@ export default function ContactPage() {
                     rows={5}
                     value={form.message}
                     onChange={(e) => setForm({ ...form, message: e.target.value })}
-                    className="w-full resize-none border border-wood-dark/15 bg-white px-5 py-4 outline-none transition focus:border-wood-gold"
+                    className="min-w-0 w-full resize-none border border-wood-dark/15 bg-white px-5 py-4 outline-none transition focus:border-wood-gold"
                     placeholder="Tell us about your project requirements..."
                   />
                 </div>
@@ -150,9 +150,9 @@ export default function ContactPage() {
             )}
           </Reveal>
 
-          <Reveal delay={0.15} direction="right">
-            <div className="space-y-8">
-              <div className="relative h-48 overflow-hidden bg-wood-cream">
+          <Reveal delay={0.15} direction="right" className="min-w-0 overflow-hidden">
+            <div className="min-w-0 space-y-8">
+              <div className="relative h-48 w-full overflow-hidden bg-wood-cream">
                 <Image
                   src={IMAGES.contactShowroom}
                   alt="Garg Plywood Palace — Proud BNI Member"
@@ -162,7 +162,7 @@ export default function ContactPage() {
                 />
               </div>
 
-              <div className="bg-wood-dark p-10 text-wood-cream">
+              <div className="bg-wood-dark p-6 text-wood-cream md:p-10">
                 <p className="section-label">Quick Contact</p>
                 <ul className="mt-8 space-y-6">
                   {PEOPLE.owners.map((o) => (
@@ -172,7 +172,7 @@ export default function ContactPage() {
                       </p>
                       <a
                         href={`tel:${o.tel}`}
-                        className="font-display text-2xl text-wood-gold hover:underline"
+                        className="font-display text-xl break-all text-wood-gold hover:underline sm:text-2xl"
                       >
                         {o.phone}
                       </a>
@@ -184,7 +184,7 @@ export default function ContactPage() {
                     </p>
                     <a
                       href={`mailto:${SITE.email}`}
-                      className="text-wood-gold hover:underline"
+                      className="break-all text-wood-gold hover:underline"
                     >
                       {SITE.email}
                     </a>
@@ -196,12 +196,12 @@ export default function ContactPage() {
                     <p>{SITE.hours}</p>
                   </li>
                 </ul>
-                <div className="mt-8 flex flex-wrap gap-4">
+                <div className="mt-8 flex flex-wrap gap-3 sm:gap-4">
                   <a
                     href={`https://wa.me/${SITE.whatsapp}`}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="btn-primary !bg-green-700 !border-green-700 hover:!bg-green-600"
+                    className="btn-primary !border-green-700 !bg-green-700 hover:!bg-green-600"
                   >
                     WhatsApp
                   </a>
@@ -216,7 +216,7 @@ export default function ContactPage() {
                 </div>
               </div>
 
-              <div className="border border-wood-dark/10 p-10">
+              <div className="border border-wood-dark/10 p-6 md:p-10">
                 <h3 className="font-display text-xl font-semibold text-wood-dark">
                   {LOCATION.name}
                 </h3>
