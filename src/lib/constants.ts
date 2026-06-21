@@ -145,6 +145,15 @@ export const PRODUCTS = [
     features: ["PVC & teakwood", "Finished look", "Wide profiles"],
     image: "/images/products/mouldings.jpg?v=2",
   },
+  {
+    id: "adhesives",
+    name: "Adhesives",
+    category: "Adhesives",
+    description:
+      "Premium wood adhesives and bonding solutions — Fevicol-type synthetic resin glues for plywood, laminate, veneer, and furniture assembly.",
+    features: ["Fevicol & resin brands", "Wood & laminate bonding", "Fast-setting formulas"],
+    image: "/images/products/adhesives.jpg?v=2",
+  },
 ] as const;
 
 export const BRANDS = [
@@ -163,7 +172,7 @@ export const BRANDS = [
 export const STATS = [
   { value: "1985", label: "Established Since" },
   { value: "40+", label: "Years of Excellence" },
-  { value: "9+", label: "Product Categories" },
+  { value: "10+", label: "Product Categories" },
   { value: "1000+", label: "Projects Served" },
 ] as const;
 

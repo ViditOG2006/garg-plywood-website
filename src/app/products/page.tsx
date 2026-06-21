@@ -22,7 +22,7 @@ export default function ProductsPage() {
       <PageHeader
         label="Products"
         title="Our Product Range"
-        description="From plywood and block boards to laminates, timber, HDHMR, veneers, louvers, and mouldings — everything for your project under one roof."
+        description="From plywood and block boards to laminates, timber, HDHMR, veneers, louvers, mouldings, and adhesives — everything for your project under one roof."
         image={IMAGES.heroWood}
       />
 

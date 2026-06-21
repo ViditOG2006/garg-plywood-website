@@ -6,7 +6,7 @@ import { PRODUCTS } from "@/lib/constants";
 import Reveal, { StaggerContainer, StaggerItem } from "./Reveal";
 
 export default function ProductsPreview() {
-  const preview = PRODUCTS.slice(0, 6);
+  const preview = PRODUCTS;
 
   return (
     <section className="section-padding bg-white">
