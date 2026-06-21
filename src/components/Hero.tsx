@@ -48,15 +48,16 @@ export default function Hero() {
             </p>
           </motion.div>
 
-          <h1 className="max-w-5xl font-display text-[clamp(2.35rem,8.2vw,7rem)] font-semibold leading-[0.97] tracking-tight text-wood-cream md:text-[clamp(2.5rem,9vw,7rem)] md:leading-[0.95]">
+          <h1 className="max-w-5xl overflow-visible font-display text-[clamp(2.35rem,8.2vw,7rem)] font-semibold leading-[1.02] tracking-tight text-wood-cream md:text-[clamp(2.5rem,9vw,7rem)] md:leading-[1]">
             <TextReveal text="Strong Foundations," delay={0.4} animateOnMount />
             <br />
-            <span className="font-medium italic">
+            <span className="inline-block overflow-visible font-medium italic">
               <TextReveal
                 text="Beautiful Creations"
                 delay={0.65}
                 animateOnMount
                 wordClassName="text-gradient-gold"
+                wordWrapperClassName="pb-[0.5em] -mb-[0.5em]"
               />
             </span>
           </h1>

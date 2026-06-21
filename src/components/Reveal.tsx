@@ -40,12 +40,14 @@ export function TextReveal({
   text,
   className = "",
   wordClassName = "",
+  wordWrapperClassName = "",
   delay = 0,
   animateOnMount = false,
 }: {
   text: string;
   className?: string;
   wordClassName?: string;
+  wordWrapperClassName?: string;
   delay?: number;
   /** Use mount animation instead of whileInView — required for above-the-fold hero text */
   animateOnMount?: boolean;
@@ -57,7 +59,7 @@ export function TextReveal({
       {words.map((word, i) => (
         <span
           key={i}
-          className="mr-[0.25em] inline-block overflow-hidden pb-[0.2em] -mb-[0.2em]"
+          className={`mr-[0.25em] inline-block overflow-hidden pb-[0.35em] -mb-[0.35em] ${wordWrapperClassName}`}
         >
           <motion.span
             className={`inline-block ${wordClassName}`}

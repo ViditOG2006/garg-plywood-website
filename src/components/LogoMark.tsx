@@ -8,26 +8,27 @@ type LogoMarkProps = {
 };
 
 const sizeClasses = {
-  sm: "h-14 w-14",
-  md: "h-16 w-16",
+  sm: "h-11 w-11 p-2 md:h-14 md:w-14 md:p-2.5",
+  md: "h-14 w-14 p-2.5 md:h-16 md:w-16 md:p-3",
 } as const;
 
-const sizePx = {
-  sm: "56px",
-  md: "64px",
+const imageSizes = {
+  sm: "(max-width: 768px) 44px, 56px",
+  md: "(max-width: 768px) 56px, 64px",
 } as const;
 
 export default function LogoMark({ size = "sm", className = "", priority = false }: LogoMarkProps) {
   return (
     <div
-      className={`relative shrink-0 overflow-hidden rounded-full bg-wood-deep ring-2 ring-wood-gold/50 shadow-md ${sizeClasses[size]} ${className}`}
+      className={`relative flex shrink-0 items-center justify-center overflow-hidden rounded-full bg-wood-deep ring-2 ring-wood-gold/50 shadow-md ${sizeClasses[size]} ${className}`}
     >
       <Image
-        src={IMAGES.logo}
+        src={IMAGES.logoIcon}
         alt="Garg Plywood Palace logo"
-        fill
-        className="scale-[2.65] object-cover object-[center_9%]"
-        sizes={sizePx[size]}
+        width={256}
+        height={256}
+        className="h-full w-full object-contain"
+        sizes={imageSizes[size]}
         priority={priority}
       />
     </div>
