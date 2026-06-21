@@ -6,17 +6,17 @@ import { PEOPLE, SITE, IMAGES, SUCCESS_PILLARS } from "@/lib/constants";
 
 export default function LegacySection() {
   return (
-    <section className="section-padding bg-surface">
+    <section className="section-padding bg-wood-cream">
       <div className="mx-auto max-w-[1400px]">
         <div className="grid items-center gap-16 lg:grid-cols-2">
           <Reveal direction="left">
             <p className="section-label">Our Legacy</p>
-            <h2 className="font-display mt-4 text-4xl font-semibold leading-tight text-ink md:text-5xl lg:text-6xl">
+            <h2 className="font-display mt-4 text-4xl font-semibold leading-tight text-wood-dark md:text-5xl lg:text-6xl">
               Built on Quality.
               <br />
               <span className="italic text-wood-medium">Driven by Trust.</span>
             </h2>
-            <p className="mt-8 leading-relaxed text-ink/65">
+            <p className="mt-8 leading-relaxed text-wood-dark/65">
               Garg Plywood Palace was started in {SITE.founded} in Uttam Nagar, New Delhi, as a
               family-owned venture dedicated to providing superior plywood and timber. For nearly
               four decades, we have nurtured long-term client relationships and grown into a
@@ -28,8 +28,8 @@ export default function LegacySection() {
                 <p className="text-[10px] font-bold uppercase tracking-[0.35em] text-wood-gold">
                   Founder
                 </p>
-                <p className="font-display mt-2 text-2xl text-ink">{PEOPLE.founder}</p>
-                <p className="mt-1 text-sm text-ink/50">
+                <p className="font-display mt-2 text-2xl text-wood-dark">{PEOPLE.founder}</p>
+                <p className="mt-1 text-sm text-wood-dark/50">
                   Visionary who laid the foundation of trust and quality
                 </p>
               </div>
@@ -41,9 +41,9 @@ export default function LegacySection() {
                   {PEOPLE.owners.map((owner) => (
                     <div
                       key={owner.name}
-                      className="border border-ink/10 bg-surface-elevated px-6 py-4"
+                      className="border border-wood-dark/10 bg-white px-6 py-4"
                     >
-                      <p className="font-display text-xl text-ink">{owner.name}</p>
+                      <p className="font-display text-xl text-wood-dark">{owner.name}</p>
                       <a
                         href={`tel:${owner.tel}`}
                         className="mt-1 block text-sm text-wood-medium hover:text-wood-gold"
@@ -93,7 +93,7 @@ export default function LegacySection() {
                           : "🚚"}
                   </span>
                 </div>
-                <p className="flex flex-1 items-center justify-center pb-0.5 text-xs font-bold uppercase leading-normal tracking-[0.15em] text-ink/70">
+                <p className="flex flex-1 items-center justify-center pb-0.5 text-xs font-bold uppercase leading-normal tracking-[0.15em] text-wood-dark/70">
                   {pillar.label}
                 </p>
               </div>

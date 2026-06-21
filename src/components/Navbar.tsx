@@ -33,10 +33,10 @@ export default function Navbar() {
         transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-700 ${
           scrolled
-            ? "border-b border-ink/5 bg-surface/95 py-3 backdrop-blur-2xl"
+            ? "border-b border-wood-dark/5 bg-wood-cream/95 py-3 backdrop-blur-2xl"
             : dark
               ? "bg-transparent py-7"
-              : "bg-surface/90 py-5 backdrop-blur-xl"
+              : "bg-wood-cream/90 py-5 backdrop-blur-xl"
         }`}
       >
         <nav className="mx-auto flex max-w-[1400px] items-center justify-between px-6 md:px-12">
@@ -45,7 +45,7 @@ export default function Navbar() {
             <div className="hidden sm:block">
               <p
                 className={`font-display text-lg font-semibold leading-none tracking-wide transition-colors ${
-                  dark ? "text-wood-cream" : "text-ink"
+                  dark ? "text-wood-cream" : "text-wood-dark"
                 }`}
               >
                 Garg Plywood Palace
@@ -72,7 +72,7 @@ export default function Navbar() {
                       : "text-wood-medium"
                     : dark
                       ? "text-wood-cream/70 hover:text-wood-cream"
-                      : "text-ink/60 hover:text-ink"
+                      : "text-wood-dark/60 hover:text-wood-dark"
                 }`}
               >
                 {link.label}
@@ -90,7 +90,7 @@ export default function Navbar() {
             <a
               href={`tel:${PEOPLE.owners[0].tel}`}
               className={`text-[10px] font-bold uppercase tracking-[0.25em] ${
-                dark ? "text-wood-cream/80" : "text-ink/70"
+                dark ? "text-wood-cream/80" : "text-wood-dark/70"
               }`}
             >
               {PEOPLE.owners[0].phone}
@@ -124,7 +124,7 @@ export default function Navbar() {
                         : { rotate: -45, y: -6 }
                     : { rotate: 0, y: 0, opacity: 1 }
                 }
-                className={`block h-px w-7 ${dark && !menuOpen ? "bg-wood-cream" : "bg-ink"}`}
+                className={`block h-px w-7 ${dark && !menuOpen ? "bg-wood-cream" : "bg-wood-dark"}`}
               />
             ))}
           </button>

@@ -37,7 +37,7 @@ export default function ProductsPage() {
                   className={`px-5 py-2.5 text-[10px] font-bold uppercase tracking-[0.25em] transition-all ${
                     activeCategory === cat
                       ? "bg-wood-dark text-wood-cream"
-                      : "border border-ink/15 text-ink/60 hover:border-ink"
+                      : "border border-wood-dark/15 text-wood-dark/60 hover:border-wood-dark"
                   }`}
                 >
                   {cat}
@@ -67,13 +67,13 @@ export default function ProductsPage() {
                     </span>
                   </div>
                   <div className="p-8">
-                    <h2 className="font-display text-2xl font-semibold text-ink">
+                    <h2 className="font-display text-2xl font-semibold text-wood-dark">
                       {product.name}
                     </h2>
-                    <p className="mt-4 text-sm leading-relaxed text-ink/60">
+                    <p className="mt-4 text-sm leading-relaxed text-wood-dark/60">
                       {product.description}
                     </p>
-                    <ul className="mt-6 space-y-2 border-t border-ink/8 pt-6">
+                    <ul className="mt-6 space-y-2 border-t border-wood-dark/8 pt-6">
                       {product.features.map((f) => (
                         <li
                           key={f}

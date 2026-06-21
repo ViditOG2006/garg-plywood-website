@@ -39,7 +39,7 @@ export default function TestimonialsPage() {
           <Reveal>
             <div className="relative mb-20 overflow-hidden border border-wood-gold/20 bg-wood-dark">
               <div className="grid lg:grid-cols-2">
-                <div className="bg-surface p-4 md:p-6">
+                <div className="bg-wood-cream p-4 md:p-6">
                   <ClientLettersGallery
                     variant="full"
                     fullSizes="(max-width: 640px) 100vw, (max-width: 1024px) 45vw, 320px"
@@ -75,15 +75,15 @@ export default function TestimonialsPage() {
                   <span className="mb-4 inline-block text-[10px] font-bold uppercase tracking-[0.25em] text-wood-gold">
                     {t.project}
                   </span>
-                  <blockquote className="flex-1 text-sm leading-relaxed text-ink/65">
+                  <blockquote className="flex-1 text-sm leading-relaxed text-wood-dark/65">
                     &ldquo;{t.quote}&rdquo;
                   </blockquote>
-                  <div className="mt-6 flex items-center gap-4 border-t border-ink/8 pt-6">
-                    <div className="flex h-12 w-12 items-center justify-center bg-surface font-display text-lg font-bold text-wood-medium">
+                  <div className="mt-6 flex items-center gap-4 border-t border-wood-dark/8 pt-6">
+                    <div className="flex h-12 w-12 items-center justify-center bg-wood-cream font-display text-lg font-bold text-wood-medium">
                       {t.name.charAt(0)}
                     </div>
                     <div>
-                      <p className="font-semibold text-ink">{t.name}</p>
+                      <p className="font-semibold text-wood-dark">{t.name}</p>
                       <p className="text-xs text-wood-medium">{t.role}</p>
                     </div>
                   </div>

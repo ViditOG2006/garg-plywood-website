@@ -47,6 +47,7 @@ export const NAV_LINKS = [
 
 export const IMAGES = {
   logo: "/images/logo.png",
+  logoNav: "/images/logo-nav.png",
   logoIcon: "/images/logo-icon.png",
   heroWood: "/images/hero-wood-texture.png",
   aboutHero: "/images/about/showroom.jpg",

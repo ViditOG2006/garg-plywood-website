@@ -56,21 +56,21 @@ export default function ContactPage() {
         <div className="mx-auto grid max-w-[1400px] gap-20 lg:grid-cols-2">
           <Reveal>
             <p className="section-label">Send a Message</p>
-            <h2 className="font-display mt-4 text-3xl font-semibold text-ink">
+            <h2 className="font-display mt-4 text-3xl font-semibold text-wood-dark">
               Get In Touch
             </h2>
 
             {submitted ? (
-              <div className="mt-10 border border-wood-gold/30 bg-surface p-12 text-center">
-                <p className="font-display text-3xl text-ink">Thank You!</p>
-                <p className="mt-4 text-ink/60">
+              <div className="mt-10 border border-wood-gold/30 bg-wood-cream p-12 text-center">
+                <p className="font-display text-3xl text-wood-dark">Thank You!</p>
+                <p className="mt-4 text-wood-dark/60">
                   We&apos;ve received your message and will contact you shortly.
                 </p>
               </div>
             ) : (
               <form onSubmit={handleSubmit} className="mt-10 space-y-6">
                 {error && (
-                  <div className="border border-red-300 bg-red-50 px-5 py-4 text-sm text-red-800 dark:border-red-800/50 dark:bg-red-950/40 dark:text-red-200">
+                  <div className="border border-red-300 bg-red-50 px-5 py-4 text-sm text-red-800">
                     {error}
                   </div>
                 )}
@@ -83,7 +83,7 @@ export default function ContactPage() {
                     type="text"
                     value={form.name}
                     onChange={(e) => setForm({ ...form, name: e.target.value })}
-                    className="input-field"
+                    className="w-full border border-wood-dark/15 bg-white px-5 py-4 text-wood-dark outline-none transition focus:border-wood-gold"
                     placeholder="Your name"
                   />
                 </div>
@@ -97,7 +97,7 @@ export default function ContactPage() {
                       type="tel"
                       value={form.phone}
                       onChange={(e) => setForm({ ...form, phone: e.target.value })}
-                      className="input-field"
+                      className="w-full border border-wood-dark/15 bg-white px-5 py-4 outline-none transition focus:border-wood-gold"
                       placeholder="+91 XXXXX XXXXX"
                     />
                   </div>
@@ -109,7 +109,7 @@ export default function ContactPage() {
                       type="email"
                       value={form.email}
                       onChange={(e) => setForm({ ...form, email: e.target.value })}
-                      className="input-field"
+                      className="w-full border border-wood-dark/15 bg-white px-5 py-4 outline-none transition focus:border-wood-gold"
                       placeholder="you@email.com"
                     />
                   </div>
@@ -121,7 +121,7 @@ export default function ContactPage() {
                   <select
                     value={form.contactPerson}
                     onChange={(e) => setForm({ ...form, contactPerson: e.target.value })}
-                    className="input-field"
+                    className="w-full border border-wood-dark/15 bg-white px-5 py-4 outline-none transition focus:border-wood-gold"
                   >
                     {PEOPLE.owners.map((o) => (
                       <option key={o.name} value={o.name}>
@@ -139,7 +139,7 @@ export default function ContactPage() {
                     rows={5}
                     value={form.message}
                     onChange={(e) => setForm({ ...form, message: e.target.value })}
-                    className="input-field resize-none"
+                    className="w-full resize-none border border-wood-dark/15 bg-white px-5 py-4 outline-none transition focus:border-wood-gold"
                     placeholder="Tell us about your project requirements..."
                   />
                 </div>
@@ -152,7 +152,7 @@ export default function ContactPage() {
 
           <Reveal delay={0.15} direction="right">
             <div className="space-y-8">
-              <div className="relative h-48 overflow-hidden bg-surface">
+              <div className="relative h-48 overflow-hidden bg-wood-cream">
                 <Image
                   src={IMAGES.contactShowroom}
                   alt="Garg Plywood Palace — Proud BNI Member"
@@ -216,11 +216,11 @@ export default function ContactPage() {
                 </div>
               </div>
 
-              <div className="border border-ink/10 p-10">
-                <h3 className="font-display text-xl font-semibold text-ink">
+              <div className="border border-wood-dark/10 p-10">
+                <h3 className="font-display text-xl font-semibold text-wood-dark">
                   {LOCATION.name}
                 </h3>
-                <p className="mt-4 text-sm leading-relaxed text-ink/60">
+                <p className="mt-4 text-sm leading-relaxed text-wood-dark/60">
                   {LOCATION.fullAddress}
                 </p>
                 <p className="mt-2 text-xs text-wood-medium">{LOCATION.landmark}</p>

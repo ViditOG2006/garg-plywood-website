@@ -7,28 +7,23 @@ type LogoMarkProps = {
   priority?: boolean;
 };
 
-const sizeClasses = {
-  sm: "h-11 w-11 p-2 md:h-14 md:w-14 md:p-2.5",
-  md: "h-14 w-14 p-2.5 md:h-16 md:w-16 md:p-3",
-} as const;
-
-const imageSizes = {
-  sm: "(max-width: 768px) 44px, 56px",
-  md: "(max-width: 768px) 56px, 64px",
+const dimensions = {
+  sm: { box: "h-11 w-11 md:h-12 md:w-12", sizes: "(max-width: 768px) 44px, 48px" },
+  md: { box: "h-12 w-12 md:h-14 md:w-14", sizes: "(max-width: 768px) 48px, 56px" },
 } as const;
 
 export default function LogoMark({ size = "sm", className = "", priority = false }: LogoMarkProps) {
+  const { box, sizes } = dimensions[size];
+
   return (
-    <div
-      className={`relative flex shrink-0 items-center justify-center overflow-hidden rounded-full bg-wood-deep ring-2 ring-wood-gold/50 shadow-md ${sizeClasses[size]} ${className}`}
-    >
+    <div className={`relative shrink-0 ${box} ${className}`}>
       <Image
-        src={IMAGES.logoIcon}
+        src={IMAGES.logoNav}
         alt="Garg Plywood Palace logo"
         width={256}
         height={256}
         className="h-full w-full object-contain"
-        sizes={imageSizes[size]}
+        sizes={sizes}
         priority={priority}
       />
     </div>

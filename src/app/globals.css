@@ -1,43 +1,21 @@
 @import "tailwindcss";
 
-@custom-variant dark (@media (prefers-color-scheme: dark));
-
 :root {
-  --background: #f7f3ed;
-  --foreground: #1f140d;
-  --surface: #f7f3ed;
-  --surface-elevated: #ffffff;
-  --ink: #2a1810;
-  --wood-dark: #2a1810;
+  --background: #faf7f2;
+  --foreground: #2c1810;
+  --wood-dark: #2c1810;
   --wood-deep: #1a0f0a;
-  --wood-medium: #5c3d24;
-  --wood-light: #b8895a;
+  --wood-medium: #6b4423;
+  --wood-light: #c8956c;
   --wood-gold: #c9a962;
-  --wood-cream: #f7f3ed;
-  --wood-accent: #8b5a2b;
+  --wood-cream: #f5ebe0;
+  --wood-accent: #d4a574;
   --grain-overlay: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.035'/%3E%3C/svg%3E");
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #1a1209;
-    --foreground: #ede5d8;
-    --surface: #221a12;
-    --surface-elevated: #2d2218;
-    --ink: #ede5d8;
-    --wood-medium: #c4a574;
-    --wood-light: #c9a060;
-    --wood-gold: #d4b96e;
-    --wood-accent: #a67c4a;
-  }
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --color-surface: var(--surface);
-  --color-surface-elevated: var(--surface-elevated);
-  --color-ink: var(--ink);
   --color-wood-dark: var(--wood-dark);
   --color-wood-deep: var(--wood-deep);
   --color-wood-medium: var(--wood-medium);
@@ -56,7 +34,7 @@ html {
   scroll-behavior: smooth;
   overflow-x: clip;
   max-width: 100%;
-  color-scheme: light dark;
+  color-scheme: light;
 }
 html.lenis, html.lenis body { height: auto; }
 .lenis.lenis-smooth { scroll-behavior: auto !important; }
@@ -79,12 +57,6 @@ body::before {
   opacity: 0.4;
 }
 
-@media (prefers-color-scheme: dark) {
-  body::before {
-    opacity: 0.25;
-  }
-}
-
 ::selection {
   background: var(--wood-gold);
   color: var(--wood-deep);
@@ -95,17 +67,16 @@ body::before {
 }
 
 .text-gradient-gold {
-  color: #d4b96e;
-  background-image: linear-gradient(135deg, #d4b96e 0%, #f0e0b8 45%, #c9a060 100%);
+  background: linear-gradient(135deg, #c9a962 0%, #e8d5a8 40%, #b8895a 100%);
   -webkit-background-clip: text;
-  background-clip: text;
   -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 @supports not ((-webkit-background-clip: text) or (background-clip: text)) {
   .text-gradient-gold {
     -webkit-text-fill-color: currentColor;
-    color: #d4b96e;
+    color: #c9a962;
     background-image: none;
   }
 }
@@ -136,7 +107,7 @@ body::before {
 }
 
 .btn-outline {
-  @apply inline-flex items-center justify-center gap-2 rounded-none border border-ink/30 bg-transparent px-10 py-4 text-[11px] font-bold uppercase tracking-[0.35em] text-ink transition-all duration-500 hover:border-wood-dark hover:bg-wood-dark hover:text-wood-cream;
+  @apply inline-flex items-center justify-center gap-2 rounded-none border border-wood-dark/30 bg-transparent px-10 py-4 text-[11px] font-bold uppercase tracking-[0.35em] text-wood-dark transition-all duration-500 hover:border-wood-dark hover:bg-wood-dark hover:text-wood-cream;
 }
 
 .btn-outline-light {
@@ -144,11 +115,11 @@ body::before {
 }
 
 .card-luxury {
-  @apply border border-ink/8 bg-surface-elevated/80 backdrop-blur-sm transition-all duration-700 hover:border-wood-gold/30 hover:shadow-2xl hover:shadow-wood-dark/8;
+  @apply border border-wood-dark/8 bg-white/80 backdrop-blur-sm transition-all duration-700 hover:border-wood-gold/30 hover:shadow-2xl hover:shadow-wood-dark/8;
 }
 
 .input-field {
-  @apply w-full border border-ink/15 bg-surface-elevated px-5 py-4 text-ink outline-none transition focus:border-wood-gold;
+  @apply w-full border border-wood-dark/15 bg-white px-5 py-4 text-wood-dark outline-none transition focus:border-wood-gold;
 }
 
 .marquee-track {
