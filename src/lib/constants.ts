@@ -143,7 +143,7 @@ export const PRODUCTS = [
     description:
       "PVC and teakwood mouldings that give an excellent finished look to interiors, ceilings, and wall details.",
     features: ["PVC & teakwood", "Finished look", "Wide profiles"],
-    image: "/images/products/mouldings.jpg?v=2",
+    image: "/images/products/mouldings.jpg?v=3",
   },
   {
     id: "adhesives",
