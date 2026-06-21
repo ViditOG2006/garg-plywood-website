@@ -75,7 +75,7 @@ See `.env.example` in the repo for local development. **Never commit `.env.local
 
 1. In Render: **New +** → **Blueprint**.
 2. Connect the same GitHub repo; Render reads `render.yaml` at the repo root.
-3. Review the proposed web service and enter SMTP values when prompted (`sync: false` keys).
+3. Review the proposed web service and enter SMTP values when prompted (`sync: false` keys). `NEXT_PUBLIC_SITE_URL` is set in `render.yaml` for SEO, sitemap, and Open Graph.
 4. Apply the Blueprint.
 
 ## Free vs paid tier
@@ -96,7 +96,7 @@ For a business brochure site, free tier is fine for testing; use a paid instance
 2. Add e.g. `gargplywoodpalace.com` and `www.gargplywoodpalace.com`.
 3. At your domain registrar, add the DNS records Render shows (usually a CNAME for `www` and A/ALIAS for apex).
 4. Wait for DNS propagation; Render provisions TLS automatically.
-5. Update `SITE.url` in `src/lib/constants.ts` if it still points elsewhere, then redeploy.
+5. Set `NEXT_PUBLIC_SITE_URL` to your custom domain (e.g. `https://gargplywoodpalace.com`) in Render **Environment**, then redeploy.
 
 ## Verify deployment
 
