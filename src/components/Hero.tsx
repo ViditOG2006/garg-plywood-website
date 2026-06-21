@@ -51,8 +51,13 @@ export default function Hero() {
           <h1 className="max-w-5xl font-display text-[clamp(2.35rem,8.2vw,7rem)] font-semibold leading-[0.97] tracking-tight text-wood-cream md:text-[clamp(2.5rem,9vw,7rem)] md:leading-[0.95]">
             <TextReveal text="Strong Foundations," delay={0.4} animateOnMount />
             <br />
-            <span className="text-gradient-gold font-medium italic">
-              <TextReveal text="Beautiful Creations" delay={0.65} animateOnMount />
+            <span className="font-medium italic">
+              <TextReveal
+                text="Beautiful Creations"
+                delay={0.65}
+                animateOnMount
+                wordClassName="text-gradient-gold"
+              />
             </span>
           </h1>
 
@@ -81,7 +86,7 @@ export default function Hero() {
             transition={{ delay: 1.1 }}
             className="mt-9 flex flex-wrap gap-3.5 md:mt-12 md:gap-5"
           >
-            <Link href="/products" className="btn-primary">
+            <Link href="/products" className="btn-primary !border-wood-gold/60 !bg-wood-gold/15 hover:!bg-wood-gold/25">
               Explore Products
             </Link>
             <Link href="/contact" className="btn-outline-light">

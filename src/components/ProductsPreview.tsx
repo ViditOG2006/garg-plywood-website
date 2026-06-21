@@ -9,12 +9,12 @@ export default function ProductsPreview() {
   const preview = PRODUCTS;
 
   return (
-    <section className="section-padding bg-white">
+    <section className="section-padding bg-surface-elevated">
       <div className="mx-auto max-w-[1400px]">
         <div className="flex flex-col items-start justify-between gap-8 lg:flex-row lg:items-end">
           <Reveal>
             <p className="section-label">Our Products</p>
-            <h2 className="font-display mt-4 max-w-xl text-4xl font-semibold text-wood-dark md:text-5xl">
+            <h2 className="font-display mt-4 max-w-xl text-4xl font-semibold text-ink md:text-5xl">
               Premium Materials for Every Project
             </h2>
           </Reveal>
@@ -44,10 +44,10 @@ export default function ProductsPreview() {
                     </span>
                   </div>
                   <div className="p-8">
-                    <h3 className="font-display text-2xl font-semibold text-wood-dark transition-colors group-hover:text-wood-medium">
+                    <h3 className="font-display text-2xl font-semibold text-ink transition-colors group-hover:text-wood-medium">
                       {product.name}
                     </h3>
-                    <p className="mt-3 line-clamp-2 text-sm leading-relaxed text-wood-dark/55">
+                    <p className="mt-3 line-clamp-2 text-sm leading-relaxed text-ink/55">
                       {product.description}
                     </p>
                   </div>

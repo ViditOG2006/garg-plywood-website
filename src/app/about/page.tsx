@@ -33,7 +33,7 @@ export default function AboutPage() {
       <section className="section-padding">
         <div className="mx-auto grid max-w-[1400px] items-center gap-20 lg:grid-cols-2">
           <Reveal>
-            <div className="relative aspect-[4/3] overflow-hidden bg-wood-cream">
+            <div className="relative aspect-[4/3] overflow-hidden bg-surface">
               <Image
                 src={IMAGES.heroWood}
                 alt=""
@@ -43,7 +43,7 @@ export default function AboutPage() {
                 aria-hidden
               />
               <div className="absolute inset-0 flex items-center justify-center p-8 md:p-12">
-                <div className="relative aspect-square w-full max-w-[320px] bg-white p-6 shadow-xl ring-1 ring-wood-gold/25 md:max-w-[360px] md:p-8">
+                <div className="relative aspect-square w-full max-w-[320px] bg-surface-elevated p-6 shadow-xl ring-1 ring-wood-gold/25 md:max-w-[360px] md:p-8">
                   <Image
                     src={IMAGES.logo}
                     alt="Garg Plywood Palace — GPP logo"
@@ -59,10 +59,10 @@ export default function AboutPage() {
 
           <Reveal delay={0.15}>
             <p className="section-label">Our Story</p>
-            <h2 className="font-display mt-4 text-3xl font-semibold text-wood-dark md:text-4xl">
+            <h2 className="font-display mt-4 text-3xl font-semibold text-ink md:text-4xl">
               From {SITE.founded} to Today
             </h2>
-            <div className="mt-8 space-y-5 leading-relaxed text-wood-dark/65">
+            <div className="mt-8 space-y-5 leading-relaxed text-ink/65">
               <p>
                 Garg Plywood Palace was started in {SITE.founded} in Uttam Nagar, New Delhi, as a
                 family-owned venture dedicated to providing superior plywood and timber. Since
@@ -133,7 +133,7 @@ export default function AboutPage() {
         <div className="mx-auto max-w-[1400px]">
           <Reveal>
             <p className="section-label">Who We Serve</p>
-            <h2 className="font-display mt-4 text-3xl font-semibold text-wood-dark md:text-4xl">
+            <h2 className="font-display mt-4 text-3xl font-semibold text-ink md:text-4xl">
               Industries & Customers
             </h2>
           </Reveal>
@@ -145,14 +145,14 @@ export default function AboutPage() {
             ].map((group, i) => (
               <Reveal key={group.title} delay={i * 0.1}>
                 <div className="card-luxury p-8">
-                  <h3 className="font-display text-xl font-semibold text-wood-dark">
+                  <h3 className="font-display text-xl font-semibold text-ink">
                     {group.title}
                   </h3>
                   <ul className="mt-6 space-y-3">
                     {group.items.map((item) => (
                       <li
                         key={item}
-                        className="flex gap-3 text-sm text-wood-dark/60"
+                        className="flex gap-3 text-sm text-ink/60"
                       >
                         <span className="text-wood-gold">—</span>
                         {item}
@@ -166,10 +166,10 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="section-padding bg-wood-cream/60">
+      <section className="section-padding bg-surface/60">
         <div className="mx-auto max-w-[1400px] text-center">
           <Reveal>
-            <h2 className="font-display text-3xl font-semibold text-wood-dark">
+            <h2 className="font-display text-3xl font-semibold text-ink">
               Brands We Partner With
             </h2>
           </Reveal>
@@ -178,7 +178,7 @@ export default function AboutPage() {
               {BRANDS.map((brand) => (
                 <span
                   key={brand}
-                  className="border border-wood-dark/10 bg-white px-6 py-3 text-sm font-medium text-wood-dark/70"
+                  className="border border-ink/10 bg-surface-elevated px-6 py-3 text-sm font-medium text-ink/70"
                 >
                   {brand}
                 </span>

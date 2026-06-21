@@ -39,11 +39,13 @@ export default function Reveal({
 export function TextReveal({
   text,
   className = "",
+  wordClassName = "",
   delay = 0,
   animateOnMount = false,
 }: {
   text: string;
   className?: string;
+  wordClassName?: string;
   delay?: number;
   /** Use mount animation instead of whileInView — required for above-the-fold hero text */
   animateOnMount?: boolean;
@@ -58,7 +60,7 @@ export function TextReveal({
           className="mr-[0.25em] inline-block overflow-hidden pb-[0.2em] -mb-[0.2em]"
         >
           <motion.span
-            className="inline-block"
+            className={`inline-block ${wordClassName}`}
             initial={{ y: "110%" }}
             {...(animateOnMount
               ? { animate: { y: 0 } }

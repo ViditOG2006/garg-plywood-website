@@ -48,12 +48,12 @@ export default function MissionVisionPage() {
           </Reveal>
 
           <Reveal delay={0.15}>
-            <div className="border border-wood-dark/10 p-10 md:p-14">
+            <div className="border border-ink/10 p-10 md:p-14">
               <p className="section-label !text-wood-medium">Our Vision</p>
-              <h2 className="font-display mt-4 text-3xl font-semibold text-wood-dark md:text-4xl">
+              <h2 className="font-display mt-4 text-3xl font-semibold text-ink md:text-4xl">
                 Shaping the Future of Indian Interiors
               </h2>
-              <p className="mt-8 leading-relaxed text-wood-dark/60">
+              <p className="mt-8 leading-relaxed text-ink/60">
                 We envision a future where every home and commercial space is built with
                 sustainable, high-quality wood products. Garg Plywood Palace aims to expand its
                 reach while maintaining the personal touch and trust that has defined us since{" "}
@@ -64,11 +64,11 @@ export default function MissionVisionPage() {
         </div>
       </section>
 
-      <section className="section-padding bg-wood-cream/50">
+      <section className="section-padding bg-surface/50">
         <div className="mx-auto max-w-[1400px]">
           <Reveal>
             <p className="section-label text-center">Core Values</p>
-            <h2 className="font-display mt-4 text-center text-3xl font-semibold text-wood-dark md:text-4xl">
+            <h2 className="font-display mt-4 text-center text-3xl font-semibold text-ink md:text-4xl">
               {SITE.motto}
             </h2>
           </Reveal>
@@ -81,10 +81,10 @@ export default function MissionVisionPage() {
                       {v.title.charAt(0)}
                     </span>
                   </div>
-                  <h3 className="font-display text-xl font-semibold text-wood-dark">
+                  <h3 className="font-display text-xl font-semibold text-ink">
                     {v.title}
                   </h3>
-                  <p className="mt-3 text-sm leading-relaxed text-wood-dark/55">
+                  <p className="mt-3 text-sm leading-relaxed text-ink/55">
                     {v.description}
                   </p>
                 </div>
@@ -109,10 +109,10 @@ export default function MissionVisionPage() {
           </Reveal>
           <Reveal delay={0.15}>
             <p className="section-label">Quality Promise</p>
-            <h2 className="font-display mt-4 text-3xl font-semibold text-wood-dark">
+            <h2 className="font-display mt-4 text-3xl font-semibold text-ink">
               Our Quality Commitment
             </h2>
-            <p className="mt-6 leading-relaxed text-wood-dark/60">
+            <p className="mt-6 leading-relaxed text-ink/60">
               We commit to durable plywood that withstands time and elements, adhering to
               certified standards like ISI marks and waterproofing certifications. Our consistent
               supply ensures your projects stay on track without interruptions.
@@ -123,7 +123,7 @@ export default function MissionVisionPage() {
                 "Waterproofing — engineered for moisture resistance",
                 "Durability Tested — built to last in demanding conditions",
               ].map((item) => (
-                <li key={item} className="flex gap-3 text-sm text-wood-dark/70">
+                <li key={item} className="flex gap-3 text-sm text-ink/70">
                   <span className="text-wood-gold">◆</span>
                   {item}
                 </li>

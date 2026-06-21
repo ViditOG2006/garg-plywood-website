@@ -56,7 +56,7 @@ export default function ClientLettersGallery({
               key={letter.src}
               type="button"
               onClick={() => openLightbox(index)}
-              className="group relative aspect-[3/4] overflow-hidden border border-wood-gold/20 bg-wood-cream transition-colors hover:border-wood-gold/50"
+              className="group relative aspect-[3/4] overflow-hidden border border-wood-gold/20 bg-surface transition-colors hover:border-wood-gold/50"
               aria-label={`View ${letter.client} recommendation letter`}
             >
               <Image
@@ -83,7 +83,7 @@ export default function ClientLettersGallery({
 
   return (
     <>
-      <div className="flex h-full flex-col border border-wood-dark/10 bg-white">
+      <div className="flex h-full flex-col border border-ink/10 bg-surface-elevated">
         <button
           type="button"
           onClick={() => openLightbox(active)}
@@ -115,11 +115,11 @@ export default function ClientLettersGallery({
           </span>
         </button>
 
-        <div className="flex items-center justify-between border-t border-wood-dark/8 px-4 py-3">
+        <div className="flex items-center justify-between border-t border-ink/8 px-4 py-3">
           <button
             type="button"
             onClick={showPrev}
-            className="text-xs font-semibold uppercase tracking-[0.2em] text-wood-medium transition-colors hover:text-wood-dark"
+            className="text-xs font-semibold uppercase tracking-[0.2em] text-wood-medium transition-colors hover:text-ink"
             aria-label="Previous letter"
           >
             Prev
@@ -131,7 +131,7 @@ export default function ClientLettersGallery({
                 type="button"
                 onClick={() => setActive(index)}
                 className={`h-2 w-2 rounded-full transition-colors ${
-                  index === active ? "bg-wood-gold" : "bg-wood-dark/20 hover:bg-wood-dark/40"
+                  index === active ? "bg-wood-gold" : "bg-ink/20 hover:bg-ink/40"
                 }`}
                 aria-label={`Show ${item.client} letter`}
               />
@@ -140,13 +140,13 @@ export default function ClientLettersGallery({
           <button
             type="button"
             onClick={showNext}
-            className="text-xs font-semibold uppercase tracking-[0.2em] text-wood-medium transition-colors hover:text-wood-dark"
+            className="text-xs font-semibold uppercase tracking-[0.2em] text-wood-medium transition-colors hover:text-ink"
             aria-label="Next letter"
           >
             Next
           </button>
         </div>
-        <p className="border-t border-wood-dark/8 px-4 py-2 text-center text-[10px] font-semibold uppercase tracking-[0.25em] text-wood-medium">
+        <p className="border-t border-ink/8 px-4 py-2 text-center text-[10px] font-semibold uppercase tracking-[0.25em] text-wood-medium">
           {letter.client}
         </p>
       </div>

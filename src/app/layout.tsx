@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Cormorant_Garamond, Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
@@ -26,6 +26,13 @@ export const metadata: Metadata = {
     description: SITE.description,
     path: "/",
   }),
+};
+
+export const viewport: Viewport = {
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "#f7f3ed" },
+    { media: "(prefers-color-scheme: dark)", color: "#1a1209" },
+  ],
 };
 
 export default function RootLayout({

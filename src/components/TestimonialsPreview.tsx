@@ -9,12 +9,12 @@ export default function TestimonialsPreview() {
   const preview = TESTIMONIALS.slice(0, 3);
 
   return (
-    <section className="section-padding bg-wood-cream">
+    <section className="section-padding bg-surface">
       <div className="mx-auto max-w-[1400px]">
         <div className="flex flex-col items-start justify-between gap-8 lg:flex-row lg:items-end">
           <Reveal>
             <p className="section-label">Testimonials</p>
-            <h2 className="font-display mt-4 text-4xl font-semibold text-wood-dark md:text-5xl">
+            <h2 className="font-display mt-4 text-4xl font-semibold text-ink md:text-5xl">
               Trusted by Industry Leaders
             </h2>
           </Reveal>
@@ -42,11 +42,11 @@ export default function TestimonialsPreview() {
                       <span key={i}>★</span>
                     ))}
                   </div>
-                  <blockquote className="flex-1 text-sm leading-relaxed text-wood-dark/65">
+                  <blockquote className="flex-1 text-sm leading-relaxed text-ink/65">
                     &ldquo;{t.quote}&rdquo;
                   </blockquote>
-                  <div className="mt-6 border-t border-wood-dark/8 pt-6">
-                    <p className="font-semibold text-wood-dark">{t.name}</p>
+                  <div className="mt-6 border-t border-ink/8 pt-6">
+                    <p className="font-semibold text-ink">{t.name}</p>
                     <p className="text-xs text-wood-medium">{t.role}</p>
                   </div>
                 </article>
@@ -82,7 +82,7 @@ export function CTASection() {
                 the finest selection of plywood and interior materials.
               </p>
               <div className="mt-12 flex flex-wrap justify-center gap-5">
-                <Link href="/contact" className="btn-primary !border-wood-gold !bg-wood-gold !text-wood-deep hover:!bg-wood-cream">
+                <Link href="/contact" className="btn-primary !border-wood-gold !bg-wood-gold !text-wood-deep hover:!bg-surface">
                   Contact Us Today
                 </Link>
                 <Link href="/products" className="btn-outline-light">
@@ -99,7 +99,7 @@ export function CTASection() {
 
 export function BrandsMarquee() {
   return (
-    <section className="w-full max-w-full overflow-x-clip border-y border-wood-dark/5 bg-white py-10">
+    <section className="w-full max-w-full overflow-x-clip border-y border-ink/5 bg-surface-elevated py-10">
       <p className="mb-8 text-center text-[10px] font-bold uppercase tracking-[0.45em] text-wood-medium">
         Authorized Dealer For Leading Brands
       </p>
@@ -108,7 +108,7 @@ export function BrandsMarquee() {
           {[...BRANDS, ...BRANDS].map((brand: string, i: number) => (
             <span
               key={i}
-              className="mx-8 shrink-0 font-display text-2xl text-wood-medium transition-colors duration-300 hover:text-wood-dark sm:mx-12 sm:text-3xl"
+              className="mx-8 shrink-0 font-display text-2xl text-wood-medium transition-colors duration-300 hover:text-ink sm:mx-12 sm:text-3xl"
             >
               {brand}
             </span>

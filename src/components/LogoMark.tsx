@@ -20,13 +20,13 @@ const sizePx = {
 export default function LogoMark({ size = "sm", className = "", priority = false }: LogoMarkProps) {
   return (
     <div
-      className={`relative shrink-0 overflow-hidden rounded-full bg-white ring-2 ring-wood-gold/40 shadow-md ${sizeClasses[size]} ${className}`}
+      className={`relative shrink-0 overflow-hidden rounded-full bg-wood-deep ring-2 ring-wood-gold/50 shadow-md ${sizeClasses[size]} ${className}`}
     >
       <Image
         src={IMAGES.logo}
         alt="Garg Plywood Palace logo"
         fill
-        className="object-contain p-1.5"
+        className="scale-[2.65] object-cover object-[center_9%]"
         sizes={sizePx[size]}
         priority={priority}
       />

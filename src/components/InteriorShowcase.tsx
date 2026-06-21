@@ -93,7 +93,7 @@ function GalleryView({
             onClick={() => onSelect(i)}
             aria-label={`View ${GALLERY_PHOTOS[i].label}`}
             className={`h-1 transition-all duration-500 ${
-              i === activeIndex ? "w-8 bg-wood-gold" : "w-4 bg-wood-cream/30 hover:bg-wood-cream/50"
+              i === activeIndex ? "w-8 bg-wood-gold" : "w-4 bg-wood-cream/30 hover:bg-wood-cream/50 dark:bg-wood-cream/20 dark:hover:bg-wood-cream/35"
             }`}
           />
         ))}
@@ -108,16 +108,16 @@ export default function InteriorShowcase() {
   const [resetTrigger, setResetTrigger] = useState(0);
 
   return (
-    <section className="section-padding overflow-hidden bg-wood-cream">
+    <section className="section-padding overflow-hidden bg-surface">
       <div className="mx-auto max-w-[1400px]">
         <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-20">
           <Reveal direction="left">
             <p className="section-label">3D Interior Preview</p>
-            <h2 className="font-display mt-4 text-4xl font-semibold leading-tight text-wood-dark md:text-5xl lg:text-[3.25rem]">
+            <h2 className="font-display mt-4 text-4xl font-semibold leading-tight text-ink md:text-5xl lg:text-[3.25rem]">
               See What Our Plywood
               <span className="italic text-wood-medium"> Can Create</span>
             </h2>
-            <p className="mt-8 max-w-lg leading-relaxed text-wood-dark/60">
+            <p className="mt-8 max-w-lg leading-relaxed text-ink/60">
               From modular kitchens to elegant wardrobes and dining spaces — our premium plywood
               transforms into beautiful, durable interiors. Drag to explore the interactive 3D scene,
               or browse real project photography built with Garg Plywood Palace materials.
@@ -125,7 +125,7 @@ export default function InteriorShowcase() {
 
             <ul className="mt-10 space-y-4">
               {FEATURES.map((item) => (
-                <li key={item} className="flex items-center gap-4 text-sm text-wood-dark/75">
+                <li key={item} className="flex items-center gap-4 text-sm text-ink/75">
                   <span className="flex h-8 w-8 shrink-0 items-center justify-center border border-wood-gold/40 text-wood-gold">
                     ✓
                   </span>
@@ -143,7 +143,7 @@ export default function InteriorShowcase() {
                     setGalleryIndex(i);
                     setViewMode("gallery");
                   }}
-                  className="group relative h-16 w-20 overflow-hidden border border-wood-dark/10 transition-all hover:border-wood-gold/50"
+                  className="group relative h-16 w-20 overflow-hidden border border-ink/10 transition-all hover:border-wood-gold/50"
                 >
                   <Image
                     src={photo.src}
@@ -235,7 +235,7 @@ export default function InteriorShowcase() {
                 <button
                   type="button"
                   onClick={() => setResetTrigger((n) => n + 1)}
-                  className="absolute -bottom-10 right-0 hidden text-[10px] uppercase tracking-[0.3em] text-wood-dark/45 transition-colors hover:text-wood-gold md:block"
+                  className="absolute -bottom-10 right-0 hidden text-[10px] uppercase tracking-[0.3em] text-ink/45 transition-colors hover:text-wood-gold md:block"
                 >
                   Reset 3D View
                 </button>
