@@ -23,5 +23,5 @@ export default function SmoothScroll({ children }: { children: React.ReactNode }
     };
   }, []);
 
-  return <>{children}</>;
+  return <div className="w-full max-w-full overflow-x-clip">{children}</div>;
 }

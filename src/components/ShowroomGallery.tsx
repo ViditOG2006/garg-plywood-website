@@ -44,23 +44,25 @@ export default function ShowroomGallery() {
         </Reveal>
       </div>
 
-      <motion.div style={{ x }} className="mt-16 flex gap-6 px-6 md:px-12">
-        {images.map((img, i) => (
-          <div
-            key={i}
-            className="relative h-[320px] w-[280px] flex-shrink-0 overflow-hidden md:h-[420px] md:w-[360px]"
-          >
-            <Image
-              src={img.src}
-              alt={img.alt}
-              fill
-              className="object-cover transition-transform duration-700 hover:scale-105"
-              sizes="360px"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-wood-deep/50 to-transparent opacity-0 transition-opacity duration-500 hover:opacity-100" />
-          </div>
-        ))}
-      </motion.div>
+      <div className="mt-16 w-full overflow-hidden">
+        <motion.div style={{ x }} className="flex w-max gap-6 px-6 md:px-12">
+          {images.map((img, i) => (
+            <div
+              key={i}
+              className="relative h-[320px] w-[280px] flex-shrink-0 overflow-hidden md:h-[420px] md:w-[360px]"
+            >
+              <Image
+                src={img.src}
+                alt={img.alt}
+                fill
+                className="object-cover transition-transform duration-700 hover:scale-105"
+                sizes="360px"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-wood-deep/50 to-transparent opacity-0 transition-opacity duration-500 hover:opacity-100" />
+            </div>
+          ))}
+        </motion.div>
+      </div>
     </section>
   );
 }

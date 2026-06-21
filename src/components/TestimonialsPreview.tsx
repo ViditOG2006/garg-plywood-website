@@ -99,19 +99,21 @@ export function CTASection() {
 
 export function BrandsMarquee() {
   return (
-    <section className="overflow-hidden border-y border-wood-dark/5 bg-white py-10">
+    <section className="w-full max-w-full overflow-x-clip border-y border-wood-dark/5 bg-white py-10">
       <p className="mb-8 text-center text-[10px] font-bold uppercase tracking-[0.45em] text-wood-medium">
         Authorized Dealer For Leading Brands
       </p>
-      <div className="marquee-track flex whitespace-nowrap">
-        {[...BRANDS, ...BRANDS, ...BRANDS].map((brand: string, i: number) => (
-          <span
-            key={i}
-            className="mx-12 font-display text-3xl text-wood-medium transition-colors duration-300 hover:text-wood-dark"
-          >
-            {brand}
-          </span>
-        ))}
+      <div className="marquee-container">
+        <div className="marquee-track flex w-max whitespace-nowrap">
+          {[...BRANDS, ...BRANDS].map((brand: string, i: number) => (
+            <span
+              key={i}
+              className="mx-8 shrink-0 font-display text-2xl text-wood-medium transition-colors duration-300 hover:text-wood-dark sm:mx-12 sm:text-3xl"
+            >
+              {brand}
+            </span>
+          ))}
+        </div>
       </div>
     </section>
   );

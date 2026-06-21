@@ -1,11 +1,11 @@
 "use client";
 
 import Link from "next/link";
-import Image from "next/image";
 import { usePathname } from "next/navigation";
+import LogoMark from "@/components/LogoMark";
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { NAV_LINKS, IMAGES, PEOPLE } from "@/lib/constants";
+import { NAV_LINKS, PEOPLE } from "@/lib/constants";
 
 export default function Navbar() {
   const pathname = usePathname();
@@ -41,27 +41,7 @@ export default function Navbar() {
       >
         <nav className="mx-auto flex max-w-[1400px] items-center justify-between px-6 md:px-12">
           <Link href="/" className="group flex items-center gap-4">
-            <div className="relative h-14 w-14 shrink-0 overflow-hidden rounded-full ring-2 ring-wood-gold/40 shadow-md transition-transform group-hover:scale-105">
-              <Image
-                src={IMAGES.heroWood}
-                alt=""
-                fill
-                className="object-cover"
-                sizes="56px"
-                aria-hidden
-              />
-              <div className="absolute inset-0 flex items-start justify-center overflow-hidden bg-white/85">
-                <Image
-                  src={IMAGES.logo}
-                  alt="Garg Plywood Palace logo"
-                  width={80}
-                  height={80}
-                  className="h-[115%] w-[115%] max-w-none object-cover object-top"
-                  sizes="56px"
-                  priority
-                />
-              </div>
-            </div>
+            <LogoMark priority className="transition-transform group-hover:scale-105" />
             <div className="hidden sm:block">
               <p
                 className={`font-display text-lg font-semibold leading-none tracking-wide transition-colors ${

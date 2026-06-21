@@ -30,7 +30,11 @@
 
 * { box-sizing: border-box; }
 
-html { scroll-behavior: smooth; }
+html {
+  scroll-behavior: smooth;
+  overflow-x: clip;
+  max-width: 100%;
+}
 html.lenis, html.lenis body { height: auto; }
 .lenis.lenis-smooth { scroll-behavior: auto !important; }
 
@@ -38,7 +42,8 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-jakarta), system-ui, sans-serif;
-  overflow-x: hidden;
+  overflow-x: clip;
+  max-width: 100%;
 }
 
 body::before {
@@ -106,10 +111,18 @@ body::before {
 
 .marquee-track {
   animation: marquee 50s linear infinite;
+  will-change: transform;
 }
 
 .marquee-track-reverse {
   animation: marquee-reverse 50s linear infinite;
+  will-change: transform;
+}
+
+.marquee-container {
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
 }
 
 @keyframes marquee {

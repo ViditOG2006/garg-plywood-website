@@ -1,17 +1,17 @@
 import Link from "next/link";
-import Image from "next/image";
-import { NAV_LINKS, SITE, LOCATION, PEOPLE, BRANDS, IMAGES } from "@/lib/constants";
+import LogoMark from "@/components/LogoMark";
+import { NAV_LINKS, SITE, LOCATION, PEOPLE, BRANDS } from "@/lib/constants";
 
 export default function Footer() {
   return (
     <footer className="bg-wood-deep text-wood-cream">
       <div className="border-b border-wood-gold/10">
-        <div className="overflow-hidden py-8">
-          <div className="marquee-track flex whitespace-nowrap">
+        <div className="marquee-container py-8">
+          <div className="marquee-track flex w-max whitespace-nowrap">
             {[...BRANDS, ...BRANDS].map((brand, i) => (
               <span
                 key={i}
-                className="mx-10 font-display text-2xl text-wood-cream/15 md:text-3xl"
+                className="mx-10 shrink-0 font-display text-2xl text-wood-cream/15 md:text-3xl"
               >
                 {brand}
               </span>
@@ -24,26 +24,7 @@ export default function Footer() {
         <div className="grid gap-16 md:grid-cols-2 lg:grid-cols-4">
           <div>
             <Link href="/" className="group inline-flex items-center gap-4">
-              <div className="relative h-16 w-16 shrink-0 overflow-hidden rounded-full ring-2 ring-wood-gold/30">
-                <Image
-                  src={IMAGES.heroWood}
-                  alt=""
-                  fill
-                  className="object-cover"
-                  sizes="64px"
-                  aria-hidden
-                />
-                <div className="absolute inset-0 flex items-start justify-center overflow-hidden bg-white/85">
-                  <Image
-                    src={IMAGES.logo}
-                    alt="Garg Plywood Palace logo"
-                    width={88}
-                    height={88}
-                    className="h-[115%] w-[115%] max-w-none object-cover object-top"
-                    sizes="64px"
-                  />
-                </div>
-              </div>
+              <LogoMark size="md" className="ring-wood-gold/30" />
               <div>
                 <p className="font-display text-2xl font-semibold transition-colors group-hover:text-wood-gold">
                   Garg Plywood Palace

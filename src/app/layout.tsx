@@ -32,11 +32,11 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" className={`${cormorant.variable} ${jakarta.variable} h-full`}>
-      <body className="min-h-full flex flex-col antialiased">
+    <html lang="en" className={`${cormorant.variable} ${jakarta.variable} h-full overflow-x-clip`}>
+      <body className="flex min-h-full max-w-full flex-col overflow-x-clip antialiased">
         <SmoothScroll>
           <Navbar />
-          <main className="flex-1">{children}</main>
+          <main className="w-full max-w-full flex-1 overflow-x-clip">{children}</main>
           <Footer />
         </SmoothScroll>
       </body>

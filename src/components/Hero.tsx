@@ -18,7 +18,7 @@ export default function Hero() {
   const opacity = useTransform(scrollYProgress, [0, 0.75], [1, 0]);
 
   return (
-    <section ref={ref} className="relative min-h-[88dvh] overflow-hidden bg-wood-deep md:min-h-screen">
+    <section ref={ref} className="relative min-h-[88dvh] w-full max-w-full overflow-hidden bg-wood-deep md:min-h-screen">
       <motion.div style={{ scale }} className="absolute inset-0">
         <Image
           src={IMAGES.heroWood}
