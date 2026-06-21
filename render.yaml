@@ -1,0 +1,30 @@
+# Render Blueprint — optional one-click deploy from the Render dashboard.
+# You can also create the Web Service manually; see DEPLOY.md.
+services:
+  - type: web
+    name: garg-plywood-palace
+    runtime: node
+    region: singapore
+    plan: free
+    branch: master
+    buildCommand: npm install && npm run build
+    startCommand: npm start
+    healthCheckPath: /
+    envVars:
+      - key: NODE_VERSION
+        value: "20"
+      - key: NODE_ENV
+        value: production
+      # Contact form SMTP — set values in the Render dashboard (never commit secrets)
+      - key: SMTP_HOST
+        sync: false
+      - key: SMTP_PORT
+        sync: false
+      - key: SMTP_USER
+        sync: false
+      - key: SMTP_PASS
+        sync: false
+      - key: SMTP_FROM
+        sync: false
+      - key: SMTP_TO
+        sync: false
