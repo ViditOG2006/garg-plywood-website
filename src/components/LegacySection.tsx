@@ -78,11 +78,11 @@ export default function LegacySection() {
           </Reveal>
         </div>
 
-        <StaggerContainer className="mt-24 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        <StaggerContainer className="mt-24 grid items-stretch gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {SUCCESS_PILLARS.map((pillar) => (
-            <StaggerItem key={pillar.label}>
-              <div className="card-luxury p-8 text-center">
-                <div className="mx-auto mb-5 flex h-14 w-14 items-center justify-center rounded-full border border-wood-gold/30">
+            <StaggerItem key={pillar.label} className="h-full">
+              <div className="card-luxury flex h-full min-h-[11rem] flex-col items-center p-8 text-center sm:min-h-[12rem]">
+                <div className="mb-5 flex h-14 w-14 shrink-0 items-center justify-center rounded-full border border-wood-gold/30">
                   <span className="font-display text-xl text-wood-gold">
                     {pillar.icon === "handshake"
                       ? "🤝"
@@ -93,7 +93,7 @@ export default function LegacySection() {
                           : "🚚"}
                   </span>
                 </div>
-                <p className="text-xs font-bold uppercase leading-relaxed tracking-[0.15em] text-wood-dark/70">
+                <p className="flex flex-1 items-center justify-center pb-0.5 text-xs font-bold uppercase leading-normal tracking-[0.15em] text-wood-dark/70">
                   {pillar.label}
                 </p>
               </div>
