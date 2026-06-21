@@ -38,6 +38,7 @@ Also set:
 |----------|--------|
 | `NODE_ENV` | `production` |
 | `NODE_VERSION` | `20` |
+| `NEXT_PUBLIC_SITE_URL` | `https://garg-plywood-website.onrender.com` (or your custom domain when ready) |
 
 **Gmail App Password setup**
 

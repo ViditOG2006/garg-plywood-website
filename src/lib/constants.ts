@@ -1,10 +1,14 @@
+/** Public site URL for SEO, sitemap, and Open Graph. Override via NEXT_PUBLIC_SITE_URL on Render. */
+export const SITE_URL =
+  process.env.NEXT_PUBLIC_SITE_URL ?? "https://garg-plywood-website.onrender.com";
+
 export const SITE = {
   name: "Garg Plywood Palace",
   tagline: "Strong Foundations, Beautiful Creations",
   subtagline: "Your Trusted Plywood Partner",
   description:
     "Garg Plywood Palace is a family-owned wholesale and retail plywood dealer in Uttam Nagar, New Delhi since 1985 — offering premium plywood, block boards, laminates, timber, HDHMR, veneers, and hardware with quality you trust and service you deserve.",
-  url: "https://gargplywoodpalace.com",
+  url: SITE_URL,
   email: "gargplywoodpalacesince1985@gmail.com",
   phones: ["+91 98100 34165", "+91 98109 46165"],
   whatsapp: "919810034165",
